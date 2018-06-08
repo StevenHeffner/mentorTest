@@ -1,29 +1,40 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+ - Semantic HTML means the use of specific tags to bring an order or meaning to a web page. This benifits web developers and the browser.
 
 2. What is the box model?
+ - The box model includes margin, border, padding, and the element. The box model determines how elements interact with each other.
 
 3. What is the difference between IDs and Classes?
+ - The Css selector # selects one element with that unique id. The Css selector . selects all elements with that specific class.
 
 4. What is z-index (CSS property) useful for?
+ - The z-index css property explicitly states the depth of each element. For example, if you want to position a side nav underneath a footer, you would set the z-index of the footer higher than the side nav. 
 
 5. Summarize what the keyword 'this' is used for?
+ - The 'this' keyword refers to the current object. It is used to shorthand the object name, as well as keep your code unambiguous.
 
 6. What is a callback? What are common uses for callbacks in JavaScript?
+ - A callback is a function that is passed into another function, usally as a result of an event occuring. Callbacks are very common in JavaScript, they are used in onclicks as well as common prototypes(.filter, .map, .forEach). In React, you can also put a callback as second paramater in this.setState, to execute a function after the state has been set.
 
 7. What is a closure and why is it useful?
+ - A closure is a function that returns a function (or functions). Closures are usefull because they give access to private variables. The elements that are assigned the closures, can remeber and keep track of these variables independently. 
 
 8. How does a prototype work?
+ - Objects, Arrays, Strings..ect inherit prototypes as properties and methods. Prototypes can be added.
 
 9. What is a component-based framework/library?
+ - A component-based framework is a framwork that splits up an app into smaller, more bite sized pieces. This allows for reuse and drastically accelerates development.
 
 10. What is the component lifecycle in React?
+ - The component lifecycle in React consists of mounting, updating, and unmounting with each lifecycle having its own methods.
 
 11. What is REST? (not just a description of the acronym)
+ - REST stands for Representational State Transfer and is a standard between computers and the web. A RESTful system is stateless and separates the concerns of client and server.
 
 12. Name three common ways of getting data from a request (in Express.JS):
-
+ - Three common aways of getting data from a request in Express.JS are URL paramaters, Querys, and a plain ol GET.
 
 
 -- =====================
@@ -37,9 +48,17 @@ email varchar(255)
 13. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+  SELECT * FROM users
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+  INSERT INTO users (name, email)
+  VALUES ('Steven', 'fake@fake.com')
 
 -Update the newly created user's name to 'Bobby Boy':
+  UPDATE users
+  SET name = 'Bobby Boy'
+  WHERE name = 'Steven'
 
 -Delete the newly updated user:
+  DELETE FROM users
+  WHERE name = 'Bobby Boy'
